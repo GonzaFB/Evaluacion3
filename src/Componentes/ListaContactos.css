@@ -1,0 +1,71 @@
+.lista-contactos {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.item-contacto {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f5f5f5a1;
+}
+
+.info-contacto {
+  display: flex;
+  flex-direction: column;
+}
+
+.nombre-contacto {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.correo-contacto,
+.telefono-contacto {
+  margin-bottom: 5px;
+}
+
+.acciones-contacto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eliminar-contacto,
+.editar-contacto {
+  margin-right: 5px;
+  padding: 5px;
+  border: none;
+  background-color: transparent;
+  color: #555;
+  cursor: pointer;
+}
+
+.eliminar-contacto:hover,
+.editar-contacto:hover {
+  color: #ff0000;
+}
+
+/* Media Queries para modificar recursividad dependiendo del tamaño de la pantalla*/
+
+/* Mobile */
+@media (max-width: 767px) {
+  .lista-contactos {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+  .lista-contactos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Laptop */
+@media (min-width: 992px) {
+  .lista-contactos {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
